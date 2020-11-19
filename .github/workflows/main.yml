@@ -1,0 +1,19 @@
+name: timeline
+
+name: Do things every 5 minutes
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+
+      - name: npm install
+        run: npm ci
+
+      - name: percy
+        run: npm run test
