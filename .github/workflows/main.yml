@@ -1,7 +1,11 @@
 name: timeline
 
 name: Do things every 5 minutes
+
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "*/15 * * * *"
 
