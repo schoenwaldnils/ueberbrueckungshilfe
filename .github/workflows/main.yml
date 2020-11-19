@@ -1,6 +1,4 @@
-name: timeline
-
-name: Do things every 5 minutes
+name: Percy test every 15 min
 
 on:
   push:
